@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class data_structures {
+public class ds_array_and_string {
 
   public static void array() {
     /*
@@ -13,45 +13,43 @@ public class data_structures {
 
     // Array
 
-    int[] a0 = new int[5];  // initialise, 1st method
-    int[] a1 = {1,2,3};     // initialise, 2nd method
+    int[] a0 = new int[5];            // initialise, 1st method
+    int[] a1 = {1,2,3};               // initialise, 2nd method
+    
+    // Standard
+    int length = a1.length;           // length of the array
+    int first = a1[0];                // access an element
+    a1[1] = 4;                        // modifying an element
 
-    int length = a1.length; // length
-    int first = a1[0];      // access an element
-
-    for (int i=0; i<length; ++i) { // iterating over the array, 1st method
+    for (int i=0; i<length; ++i) {    // iterating over the array, 1st method
       System.out.println(a1[i]);  
     }
 
-    for (int item : a1) {          // iterating over the array, 2nd method
+    for (int item : a1) {             // iterating over the array, 2nd method
       System.out.println(item);
     }
 
-    a1[1] = 4;               // modifying an element
+    Arrays.sort(a1);                  // sort using the standard Arrays library
 
-    Arrays.sort(a1);         // sort using the standard Arrays library
 
-  }
+    // 2D array
 
-  public static void two_d_array() {
+    int[][] arr = new int[2][5];           // intialise, 1nd method
     
-    int[][] a = new int[2][5];
-
-    for (int i = 0; i < a.length; ++i) {
-      System.out.println(a[i]);
+    int[][] b_arr = new int[2][];          // initialise, 2nd method
+    b_arr[0] = new int[3];
+    b_arr[1] = new int[5];
+    
+    for (int i=0; i<arr.length; ++i) {     // iterate the columns
+      System.out.println(arr[i]);
     }
 
-    for (int i = 0; i < a.length; ++i) {
-      for (int j = 0; a[i] != null && j < a[i].length; ++j) {
-        System.out.print(a[i][j] + " ");
+    for (int i=0; i<arr.length; ++i) {     // iterate both columns and rows
+      for (int j=0; arr[i]!= null && j<arr[i].length; ++j) {
+        System.out.println(arr[i][j]);
       }
-      System.out.println();
     }
-    
-    int[][] b = new int[2][];
-    b[0] = new int[3];
-    b[1] = new int[5];
-    
+
   }
 
   
@@ -70,19 +68,8 @@ public class data_structures {
     ArrayList<Integer> v2 = v1;                 // another reference to v1
     List<Integer> v3 = new ArrayList<>(v1);     // the actual copy fo v1
 
-    int length = v1.size();                     // length(size) of the ArrayList
-
-    int first = v1.get(0);                      // access an element
-
-    for (int i=0; i<v1.size(); ++i) {           // iterate over the ArrayList, 1st method
-      System.out.println(v1.get(i));            
-    }
-
-    for (int item : v1) {                       // iterate over the ArrayList, 2nd method
-      System.out.println(item);            
-    }
-
     // standard
+    v1.size();                                  // size of the ArrayList
     v1.set(0, 5);                               // modify element (set element)
     v1.get(0);                                  // access element (get element)
     v1.add(-1);                                 // add element at the end
@@ -98,6 +85,15 @@ public class data_structures {
     v1.subList(1, 3);                           // subList from index to index of the initial ArrayList
     v1.toArray();                               // makes an array from the ArrayList
 
+
+    for (int i=0; i<v1.size(); ++i) {           // iterate over the ArrayList, 1st method
+      System.out.println(v1.get(i));            
+    }
+
+    for (int item : v1) {                       // iterate over the ArrayList, 2nd method
+      System.out.println(item);            
+    }
+    
 
     Collections.sort(v1);                       // sort using the standard Collection library
 
