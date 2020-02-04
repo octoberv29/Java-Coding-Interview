@@ -105,6 +105,9 @@ public class ds_array_and_string {
     String s1 = "Hello, World";                 // initialise 
     String s2 = s1;                             // s2 is another reference to s1
     String s3 = new String(s1);                 // s3 is a copy of s1
+    
+    char[] char_array = {'a', 'b', 'c'};      
+    String s4 = new String(char_array);         // convert char array to string
 
     if (s1.equals(s3)) {                        // string comparison instead of "=="
       System.out.println("YES");
@@ -182,7 +185,15 @@ public class ds_array_and_string {
                  k++;
              }
          }
+      
+       3. Sliding Window using 2 pointers
 
+          Когда нам нужно просуммировать промежуток внутри array и двигать его направо, при
+          этом сохраняя его сумму, то можно использовать первый pointer как левое начало 
+          этого отрезка, а правый от начала до конца, пока сумма не будет равна нужной и потом двигать
+          оба pointers направо удовлетворяя условию.
+
+          Это вместо того, чтобы по array проходить несколько раз
     */
   }
   
