@@ -22,6 +22,7 @@ public class ds_queue_and_stack {
 
     Queue<Integer> q = new LinkedList();  // initialise
 
+    q.isEmpty();                          // check if empty
     q.peek();                             // get the first element
     q.offer(5);                           // push a new element
     q.poll();                             // pop an element
@@ -35,7 +36,7 @@ public class ds_queue_and_stack {
       In a LIFO data structure, the newest element added to the queue will be processed first.
       The insert operation is called push in a stack. 
       Similar to the queue, a new element is always added at the end of the stack.
-      However, the delete operation, pop, will always remove the last element, in comparison to the queue.
+      However, the delete operation, pop, will always remove the last element, in comparison to the queue.p
     */
     Stack<Integer> s = new Stack<>();     // initialise
 

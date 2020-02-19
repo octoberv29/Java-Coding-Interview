@@ -23,6 +23,10 @@
     Constructor - is a special method (no return) used to initialise objects.
                     it can be used to set initial values for object attributes.
 
+    Methods:
+    1. private - helper methods, used to organise the code and keep it simple and readable
+    2. public -  actual actions that the class can perform
+ 
 
     _____________
     Encapsulation - to make sure the sensitive data is hidden from the users.
@@ -88,7 +92,8 @@
                     allow us to perform a single action in different ways
 
                     overloading - multple methods have the same name, but with different parameters
-                    overriding - child class override methods from parent class or interface
+                    overriding - child class overrides method that are inherited from a parent class 
+                                 or from interface.
 
 
     ___________
@@ -106,6 +111,8 @@
 
                     Interface - is a completely abstract class with only abstract methods.
                             - interface && implements keywords.
+
+                            - it defines what should be implemented, but not how.
 
                             - can't be used to create objects
                             - when we implement interface, we must override all of its methods
