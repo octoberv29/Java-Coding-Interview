@@ -96,6 +96,7 @@ public class ds_array_and_string {
     
 
     Collections.sort(v1);                       // sort using the standard Collection library
+    Collections.sort(v1, Collections.reverseOrder()); // sort in reverse order
 
   }
 
