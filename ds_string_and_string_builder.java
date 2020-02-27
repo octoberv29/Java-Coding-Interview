@@ -35,6 +35,10 @@ public class ds_string_and_string_builder {
         s1.substring(6, 11);                         // get substring
         s1.isEmpty();                                // check if the string is empty
 
+        s1.replaceAll("hello", "");                  // replace all occurences of a substring/word
+        s1.replaceAll("\\s", "");                    // replace all whitespaces
+        s1.replaceAll("[^a-zA-Z0-9]", "");           // replace everything except a-z, A-Z, 0-9
+
         s1.indexOf("hello");                         // find index of the char/string
         s1.lastIndexOf('o');                         // find last index of the char/string
     
@@ -44,6 +48,22 @@ public class ds_string_and_string_builder {
         s1.toLowerCase();                            // convert the string to lower case
         s1.toUpperCase();                            // convert the string to upper case
         s1.toString();                               // ???    
+    }
+
+    public static void manipulating_with_char() {
+        /*
+            ASCII:
+            'A' - 'Z' (65 - 90)
+            'a' - 'z' (97 - 122)
+            '0' - '9' (48 - 57)
+        */
+
+        String str = "Hello World!";
+
+        char c = str.charAt(0);
+        if ('A' <= c && c <= 'Z') c += ('a' - 'A');  // replace all UpperCase by LowerCase
+        if ((c < 'a' || 'z' < c) && (c < '0' || '9' < c)) { } // if not a-z or 0-9 do something
+
     }
 
     /*
