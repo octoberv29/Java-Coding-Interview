@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class ds_array_and_string {
+public class ds_array_and_arraylist {
 
   public static void array() {
     /*
@@ -99,59 +99,7 @@ public class ds_array_and_string {
     Collections.sort(v1, Collections.reverseOrder()); // sort in reverse order
 
   }
-
-
-  public static void string() {
-
-    String s1 = "Hello, World";                 // initialise 
-    String s2 = s1;                             // s2 is another reference to s1
-    String s3 = new String(s1);                 // s3 is a copy of s1
-    
-    char[] char_array = {'a', 'b', 'c'};      
-    String s4 = new String(char_array);         // convert char array to string
-
-    if (s1.equals(s3)) {                        // string comparison instead of "=="
-      System.out.println("YES");
-    }
-
-    s1.compareTo(s3);                           // compare two strings lexicographically
-    
-    // Standard
-    s1 += "!";                                   // concatenate, 1st method
-    s1.length();                                 // length of the string
-    s1.charAt(1);                                // returns char at the index
-    s1.indexOf('o');                             // find index of the char
-    s1.lastIndexOf('o');                         // find last index of the char
-    s1.isEmpty();                                // check if the string is empty
-
-    // Additional
-    s1.toCharArray();                            // convert the string to a char array
-    s1.toLowerCase();                            // convert the string to lower case
-    s1.toUpperCase();                            // convert the string to upper case
-    s1.trim();                                   // returns the string w/o whitespaces on sides
-    s1.toString();                               // ???
-
-    s1.substring(6, 11);                         // get substring
-
-    // Immutable problem in Java:
-
-    // In Java, since the string is immutable, concatenation works by 
-    // first allocating enough space for the new string, copy the contents 
-    // from the old string and append to the new string.
-
-    // 1. If you did want your string to be mutable, you can convert it to a char array.
-    // 2. If you have to concatenate strings often, it will be better to use 
-    //    some other data structures like StringBuilder. The below code runs in O(n) complexity.
-          
-    //    int n = 10000;
-    //    StringBuilder str = new StringBuilder();
-    //    for (int i = 0; i < n; i++) {
-    //      str.append("hello");
-    //    }
-    //    String s = str.toString();
-
-  }
-
+  
 
   public static void two_pointer_technique() {
     /*

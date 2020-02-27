@@ -28,11 +28,15 @@ public class ds_tree {
 
     Binary Search Tree (BST) -  special form of a binary tree, where each value of the node must be
                                 greater than or equal to any values in its left subtree 
-                                but less than ot equal to any values in its right subtree.
+                                but less than ot equal to any values in its right subtree,
+                                in addition, both left and right subtrees are also BSTs.
                                 
                                 - In addition, all elements on the right of the root must be greater 
                                 than the root and the saem for the left children.
     
+        1. USED when you want to store data in order and need several operations, 
+           such as search, insertion or deletion, at the same time, a BST might be a good choice.
+
         Like a Binary Tree, BST can be traversed using:
             1. pre-order
             2. in-order: we can create a sorted array
@@ -52,7 +56,10 @@ public class ds_tree {
                 1. If the target node has no child, we can simply remove the node.
                 2. If the target node has one child, we can use its child to replace itself.
                 3. If the target node has two children, replace the node with its in-order successor or predecessor node and delete that node.
-            
+        
+                Time Complexity for all: O(h), where h - height of the tree
+
+                
             
 
     Tree (N-ary) 
