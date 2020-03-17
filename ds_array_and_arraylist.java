@@ -74,6 +74,7 @@ public class ds_array_and_arraylist {
     v1.get(0);                                  // access element (get element)
     v1.add(-1);                                 // add element at the end
     v1.add(1, 6);                               // add element at the specified position
+    v1.addAll(v2);                              // add all elements of anothe ArrayList
     v1.remove(v1.size()-1);                     // delete the last element
     
     // additional

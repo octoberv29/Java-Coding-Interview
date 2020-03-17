@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
     Bubble sort: O(n^2)
     Insertion sort: O(n^2)
@@ -85,5 +87,88 @@ public class algo_sorting {
 		}
         return array;
     }
+
+    /*
+        Quick Sort:
+        Time: Average: O(nlog(n)) Worst: O(n*2)
+        Space: O(log(n))
+    */
+    public static void quickSort(int start, int end, int[] array) {
+		if (start >= end) return;
+		
+		int pivot = start;    // choose the first element as pivot
+		int left = start + 1; // choose left index to iterate
+		int right = end;      // choose right index to iterate
+		
+		while (left <= right) {
+			if (array[left] > array[pivot] && array[right] < array[pivot]) {
+				swap(left, right, array);
+			}
+			if (array[left] <= array[pivot]) left++;
+			if (array[right] >= array[pivot]) right--;
+		}
+		 // swap the pivot with right (last element that is greater than pivot)
+		swap(pivot, right, array);
+		
+		boolean isLeftSmaller = (right - 1) - start < end - (right + 1);
+		if (isLeftSmaller) {
+			quickSort(start, right - 1, array);
+			quickSort(right + 1, end, array);
+		} else {
+            quickSort(right + 1, end, array);
+            quickSort(start, right - 1, array);
+		}
+	}
+	
+	public static void swap(int i, int j, int[] array) {
+		int temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+    }
+    
+
+
+    /*
+        Merge Sort:
+        Time: O(nlog(n))
+        Space: O(nlog(n))
+    */
+
+    public static int[] mergeSort(int[] array) {
+        if (array.length <= 1) return array;
+    
+            int n = array.length;
+            int middle = array.length / 2;
+            
+            int[] lhs = mergeSort(Arrays.copyOfRange(array, 0, middle));
+            int[] rhs = mergeSort(Arrays.copyOfRange(array, middle, n));
+            
+        return merge(lhs, rhs);
+    }
+        
+    public static int[] merge(int[] lhs, int[] rhs) {
+        int[] result = new int[lhs.length + rhs.length];
+        int left = 0, right = 0, i = 0;
+        
+        while (left < lhs.length && right < rhs.length) {
+            if (lhs[left] < rhs[right]) {
+                result[i++] = lhs[left++];
+            } else {
+                result[i++] = rhs[right++];
+            }
+        }
+        
+        while (left < lhs.length) {
+            result[i++] = lhs[left++];
+        }
+        
+        while (right < rhs.length) {
+            result[i++] = rhs[right++];
+        }
+        
+        return result;
+    }
+
+
 
 }

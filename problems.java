@@ -30,4 +30,10 @@
         - Когда поиск в матрице, то сравни нынешнее число с соседями либо с таргетом
         - Когда поиск в массиве, то сравнивай боковые поинтеры с центраьным и с тагретом
 
+    6. Palindrome:
+        - Palindrome is a string that is symmetrical with respect to its center, which 
+          can either be a character (in the case of odd-length palindrome) 
+          or an empty string (in the case of even-length palindromes).
+          Thus, we can check the palindromaicity of a string by simply expanding
+          from its center and making sure that characters on both sides are indeed mirrored.
 */
