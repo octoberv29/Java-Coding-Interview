@@ -36,4 +36,15 @@
           or an empty string (in the case of even-length palindromes).
           Thus, we can check the palindromaicity of a string by simply expanding
           from its center and making sure that characters on both sides are indeed mirrored.
+
+
+    7. Two/Three number sum:
+        1. Do 2+ loops
+        2. Use HashTable to store the array once and do -1 loops and compare the target value to
+            the key in table
+        3. Sort array and use 2 or 3 pointers to iterate the array (i, left, right). The first
+            is just iteration, then left = i+1 and right array.size() - 1, then increment or
+            decrement the left and right pointers depending on wheter the sum of i, left and right
+            greater or smaller than the target sum.
+            
 */
