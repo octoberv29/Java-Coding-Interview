@@ -60,5 +60,9 @@ public class ds_hash_table {
     for (Map.Entry<Integer, Integer> entry : map.entrySet()) {    // iterate the hashmap
       System.out.print(entry.getKey() + entry.getValue());
     }
+
+    for (Integer item: map.values()) {
+      System.out.println(item);
+    }
   }
 }
